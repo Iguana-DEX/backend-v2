@@ -1,0 +1,19 @@
+{
+  "ethereum": 101,
+  "bsc": 102,
+  "avax": 106,
+  "polygon": 109,
+  "arbitrum": 110,
+  "optimism": 111,
+  "fantom": 112,
+
+  "goerli": 10121,
+  "bscTestnet": 10102,
+  "fuji": 10106,
+  "mumbai": 10109,
+  "arbitrumTestnet": 10143,
+  "optimismTestnet": 10132,
+  "fantomTestnet": 10112,
+  "meterTestnet": 10156,
+  "zksyncTestnet": 10165
+}
