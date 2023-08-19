@@ -1,7 +1,7 @@
-# GMX Contracts
-Contracts for GMX.
+# IguanaDEX Contracts
+Contracts for IguanaDEX - a cross-chain derivative exchange.
 
-Docs at https://gmxio.gitbook.io/gmx/contracts.
+Docs at https://docs.iguanadex.com
 
 ## Install Dependencies
 If npx is not installed yet:
