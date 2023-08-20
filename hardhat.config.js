@@ -59,17 +59,17 @@ module.exports = {
       chainId: 56,
       accounts: [process.env.PRIVATE_KEY],
     },
-    arbitrum: {
+    arbitrumOne: {
       url: process.env.ARBITRUM_URL,
       chainId: 42161,
       accounts: [process.env.PRIVATE_KEY],
     },
-    optimism: {
+    optimisticEthereum: {
       url: process.env.OPTIMISM_URL,
       chainId: 10,
       accounts: [process.env.PRIVATE_KEY],
     },
-    avax: {
+    avalanche: {
       url: process.env.AVAX_URL,
       chainId: 43114,
       accounts: [process.env.PRIVATE_KEY],
@@ -89,7 +89,7 @@ module.exports = {
       chainId: 1,
       accounts: [process.env.PRIVATE_KEY],
     },
-    fantom: {
+    opera: {
       url: process.env.FANTOM_URL,
       chainId: 250,
       accounts: [process.env.PRIVATE_KEY],
@@ -100,17 +100,17 @@ module.exports = {
       chainId: 97,
       accounts: [process.env.PRIVATE_KEY],
     },
-    arbitrumTestnet: {
+    arbitrumGoerli: {
       url: process.env.ARBITRUM_TESTNET_URL,
       chainId: 421613,
       accounts: [process.env.PRIVATE_KEY],
     },
-    optimismTestnet: {
+    optimisticGoerli: {
       url: process.env.OPTIMISM_TESTNET_URL,
       chainId: 420,
       accounts: [process.env.PRIVATE_KEY],
     },
-    mumbai: {
+    polygonMumbai: {
       url: process.env.MUMBAI_URL,
       chainId: 80001,
       accounts: [process.env.PRIVATE_KEY],
@@ -130,12 +130,12 @@ module.exports = {
       chainId: 5001,
       accounts: [process.env.PRIVATE_KEY],
     },
-    fuji: {
+    avalancheFujiTestnet: {
       url: process.env.FUJI_URL,
       chainId: 43113,
       accounts: [process.env.PRIVATE_KEY],
     },
-    fantomTestnet: {
+    ftmTestnet: {
       url: process.env.FANTOM_TESTNET_URL,
       chainId: 4002,
       accounts: [process.env.PRIVATE_KEY],
@@ -146,10 +146,18 @@ module.exports = {
     apiKey: {
       mainnet: process.env.ETHERSCAN_API_KEY,
       arbitrumOne: process.env.ARBISCAN_API_KEY,
+      optimisticEthereum: process.env.OPTIMISM_API_KEY,
       avalanche: process.env.SNOWTRACE_API_KEY,
       bsc: process.env.BSCSCAN_API_KEY,
       polygon: process.env.POLYGONSCAN_API_KEY,
-      fantom: process.env.FTMSCAN_API_KEY,
+      opera: process.env.FTMSCAN_API_KEY,
+      goerli: process.env.ETHERSCAN_API_KEY,
+      arbitrumGoerli: process.env.ARBISCAN_API_KEY,
+      optimisticGoerli: process.env.OPTIMISM_API_KEY,
+      avalancheFujiTestnet: process.env.SNOWTRACE_API_KEY,
+      bscTestnet: process.env.BSCSCAN_API_KEY,
+      polygonMumbai: process.env.POLYGONSCAN_API_KEY,
+      ftmTestnet: process.env.FTMSCAN_API_KEY,
     },
   },
 

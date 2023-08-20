@@ -9,21 +9,21 @@ const MAX_TRYS = 10;
 function TrustedRemoteTestnet() {
   this.goerli;
   this.bscTestnet;
-  this.fuji;
-  this.mumbai;
-  this.arbitrumTestnet;
-  this.optimismTestnet;
-  this.fantomTestnet;
+  this.avalancheFujiTestnet;
+  this.polygonMumbai;
+  this.arbitrumGoerli;
+  this.optimismGoerli;
+  this.ftmTestnet;
 }
 
 function TrustedRemote() {
-  this.ethereum;
+  this.mainnet;
   this.bsc;
-  this.avax;
+  this.avalanche;
   this.polygon;
-  this.arbitrum;
-  this.optimism;
-  this.fantom;
+  this.arbitrumOne;
+  this.optimisticEthereum;
+  this.opera;
 }
 
 function isJsonString(str) {
