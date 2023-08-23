@@ -5,10 +5,10 @@ module.exports = async function (taskArgs, hre) {
   const remoteChainId = CHAIN_ID[taskArgs.targetNetwork];
   const omniCounter = await ethers.getContract("OmniCounter");
 
-  // quote fee with default adapterParams
+  // quote fee - default adapterParams are [1, 200000]
   let adapterParams = ethers.utils.solidityPack(
     ["uint16", "uint256"],
-    [1, 200000]
+    [1, 300000]
   );
 
   const endpoint = await ethers.getContractAt(
@@ -24,7 +24,7 @@ module.exports = async function (taskArgs, hre) {
   );
   console.log(`fees[0] (eth): ${ethers.utils.formatEther(fees[0])}`);
 
-  let txFee = BigInt(fees[0]) * BigInt(2);
+  let txFee = BigInt(fees[0]) * BigInt(1);
 
   let tx = await (
     await omniCounter.incrementCounter(remoteChainId, { value: String(txFee) })

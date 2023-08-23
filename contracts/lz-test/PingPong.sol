@@ -43,7 +43,7 @@ contract PingPong is NonblockingLzApp, Pausable {
     ) public payable whenNotPaused {
         require(
             address(this).balance > 0,
-            "the balance of this contract is 0. pls send gas for message fees"
+            "The balance of this contract is 0. Pls send gas for message fees"
         );
 
         emit Ping(++pings);
@@ -53,7 +53,7 @@ contract PingPong is NonblockingLzApp, Pausable {
 
         // use adapterParams v1 to specify more gas for the destination
         uint16 version = 1;
-        uint gasForDestinationLzReceive = 350000;
+        uint gasForDestinationLzReceive = 700000; // Initial value was 350000
         bytes memory adapterParams = abi.encodePacked(
             version,
             gasForDestinationLzReceive

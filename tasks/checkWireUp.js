@@ -4,21 +4,21 @@ const environments = require("../constants/environments.json");
 function TrustedRemoteTestnet() {
   this.goerli;
   this.bscTestnet;
-  this.fuji;
-  this.mumbai;
-  this.arbitrumTestnet;
-  this.optimismTestnet;
-  this.fantomTestnet;
+  this.avalancheFujiTestnet;
+  this.polygonMumbai;
+  this.arbitrumGoerli;
+  this.optimisticGoerli;
+  this.ftmTestnet;
 }
 
 function TrustedRemote() {
   this.ethereum;
   this.bsc;
-  this.avax;
+  this.avalanche;
   this.polygon;
-  this.arbitrum;
-  this.optimism;
-  this.fantom;
+  this.arbitrumOne;
+  this.optimisticEthereum;
+  this.opera;
 }
 
 module.exports = async function (taskArgs) {

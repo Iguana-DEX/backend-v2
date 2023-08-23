@@ -13,7 +13,7 @@
   "polygon": "https://api.polygonscan.com/api",
   "polygonMumbai": "https://api-testnet.polygonscan.com/api",
   "optimisticEthereum": "https://api-optimistic.etherscan.io/api",
-  "optimismGoerli": "https://api-goerli-optimistic.etherscan.io/api",
+  "optimisticGoerli": "https://api-goerli-optimistic.etherscan.io/api",
 
   "aptos": "",
   "celo": "",

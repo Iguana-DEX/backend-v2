@@ -14,7 +14,7 @@ module.exports = async function (taskArgs, hre) {
   // quote fee with default adapterParams
   let adapterParams = ethers.utils.solidityPack(
     ["uint16", "uint256"],
-    [1, 200000]
+    [1, 700000]
   );
 
   const endpoint = await ethers.getContractAt(
@@ -30,7 +30,7 @@ module.exports = async function (taskArgs, hre) {
   );
   console.log(`fees[0] (eth): ${ethers.utils.formatEther(fees[0])}`);
 
-  let txFee = BigInt(fees[0]) * BigInt(2);
+  let txFee = BigInt(fees[0]) * BigInt(10);
 
   let tx = await (
     await pingPong.ping(
@@ -41,7 +41,7 @@ module.exports = async function (taskArgs, hre) {
     )
   ).wait();
   console.log(
-    `✅ Pings started! [${hre.network.name}] pinging with target chain [${dstChainId}] @ [${dstPingPongAddr}]`
+    `✅ Pings started! [${hre.network.name}] pinging with target chain [${taskArgs.targetNetwork}] @ [${dstPingPongAddr}]`
   );
   console.log(`...tx: ${tx.transactionHash}`);
 };
