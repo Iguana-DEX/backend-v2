@@ -32,6 +32,30 @@ Install packages:
 ### Run Tests
 `npx hardhat test`
 
+### How to run the PingPong example
+
+1. Deploy both PingPong contracts:
+```
+npx hardhat --network bscTestnet deploy --tags PingPong
+npx hardhat --network avalancheFujiTestnet deploy --tags PingPong
+```
+
+2. Verify both contracts:
+```
+npx hardhat verify --network bscTestnet [Address of the contract] [Address of the LayerZero endpoint on BSC Testnet]
+npx hardhat verify --network avalancheFujiTestnet [Address of the contract] [Address of the LayerZero endpoint on Fuji]
+```
+
+3. Set the remote addresses, so each contract can receive messages:
+```
+npx hardhat --network bscTestnet setTrustedRemote --target-network avalancheFujiTestnet --contract PingPong
+npx hardhat --network avalancheFujiTestnet setTrustedRemote --target-network bscTestnet --contract PingPong
+```
+
+4. Send a cross chain message from `bscTestnet` to `avalancheFujiTestnet` !
+```angular2html
+npx hardhat --network bscTestnet ping --target-network avalancheFujiTestnet
+```
 
 ## References
 
